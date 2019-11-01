@@ -29,5 +29,3 @@
     ```
 
 3. 查看`examples\dist\index.html`
-
-
