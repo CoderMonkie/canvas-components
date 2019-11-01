@@ -1,0 +1,46 @@
+{
+  "name": "react-canvas",
+  "version": "0.0.1",
+  "description": "Canvas components for React.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --config webpack.config.js",
+    "compile": "npx babel src --out-dir lib",
+    "publish": "npm run compile && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoderMonkie/react-canvas.git"
+  },
+  "author": "CoderMonkie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CoderMonkie/react-canvas/issues"
+  },
+  "homepage": "https://github.com/CoderMonkie/react-canvas#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
