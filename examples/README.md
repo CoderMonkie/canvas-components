@@ -37,7 +37,7 @@ npm install
 npm start
 ```
 
-![demo](example.jpg)
+![demo](./example.jpg)
 
 ---
 

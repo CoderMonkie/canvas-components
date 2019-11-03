@@ -28,6 +28,7 @@ function App() {
 
 - Arc
 - Canvas
+- Img
 - Line
 - Path
 - Pie
