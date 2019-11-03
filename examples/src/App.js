@@ -7,7 +7,7 @@ import Rect from '../../src/Rect'
 import Path from '../../src/Path'
 import Arc from '../../src/Arc'
 import Pie from '../../src/Pie'
-import PolyLine from '../../src/PolyLine'
+import Img from '../../src/Img'
 
 function App() {
 
@@ -15,15 +15,15 @@ function App() {
   let cx = 150, cy=120, r=100
   let circleCenter = {x:cx, y:cy}
   let data = [
-    { name: 'React', share: 45, color: '#C2B', angle:{start:180,end:330} },
-    { name: 'Vue', share: 40, color: '#FA0', angle:{start:330,end:450} },
-    { name: 'Angular', share: 15, color: '#BFF', angle:{start:450,end:540} },
+    { name: 'React', share: 42, color: '#C2B', angle:{start:180,end:330} },
+    { name: 'Vue', share: 33, color: '#FA0', angle:{start:330,end:450} },
+    { name: 'Angular', share: 25, color: '#BFF', angle:{start:450,end:540} },
   ]
 
   return (
     <div className="App">
       <header className="App-header1">
-        <h2>React-Canvas Demos</h2>
+        <h2>canvas-components demos</h2>
       </header>
       <article>
           <h3>1. 同一Canvas中不同图形分别带各自阴影样式</h3>
@@ -56,6 +56,22 @@ function App() {
             }
           </Canvas>
         </p>
+
+        <h3>4. 显示图片</h3>
+        <div>
+          <ul>
+            <li>显示原始图片<br/>
+              <Canvas width={800} height={600}>
+                <Img src='/examples/src/clover.png'></Img>
+              </Canvas>
+            </li>
+            <li>图片拉伸(stretch='fill')+灰化(filter='gray/yellow/blackWhite' or function)滤镜效果<br/>
+              <Canvas width={400} height={300}>
+                <Img src='/examples/src/clover.png' stretch='fill' filter='gray'></Img>
+              </Canvas>
+            </li>
+          </ul>
+        </div>
       </article>
       <footer className="App-footer">@CopyRight CoderMonkie 2019</footer>
     </div>

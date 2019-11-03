@@ -5,34 +5,42 @@ import PropTypes from 'prop-types';
 class Canvas extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
-            children: [],
-            ctx: null
+        this.state = {
+            ctx: null,
+            width: 300,
+            height: 150,
          }
     }
 
     static childContextTypes = {
-        ctx: PropTypes.object
+        ctx: PropTypes.object,
+        width: PropTypes.number,
+        height: PropTypes.number,
     }
 
     getChildContext() {
         return {
-            ctx: this.state.ctx
+            ctx: this.state.ctx,
+            width: this.state.width,
+            height: this.state.height
         }
     }
 
-    render() { 
+    render() {
+        const { width, height, children } = this.props
+
         return ( 
-            <canvas width={this.props.width} height={this.props.height}>
-                { this.props.children }
+            <canvas width={ width } height={ height }>
+                { children }
             </canvas>
          );
     }
 
     componentDidMount() {
         this.setState({
-            children: this.props.children,
-            ctx: ReactDOM.findDOMNode(this).getContext('2d')
+            ctx: ReactDOM.findDOMNode(this).getContext('2d'),
+            width: this.props.width || 300,
+            height: this.props.height || 150,
         })
     }
 }

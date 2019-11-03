@@ -1,8 +1,9 @@
 # canvas-components
 
-以react组件化开发的方式，实现canvas的基本api，在react项目中方便地使用canvas相关组件。
+当パッケージは、ReactでCanvas描画するコンポネントを提供している。  
+canvasのjs実装なくても、Canvas、Line、Imgなどのタグを用いて簡単に作れる。
 
-# 安装
+# インストール
 
 ```
 npm install canvas-components
@@ -28,6 +29,7 @@ function App() {
 
 - Arc
 - Canvas
+- Img
 - Line
 - Path
 - Pie

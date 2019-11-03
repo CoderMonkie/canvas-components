@@ -8,7 +8,9 @@ class GraphBase extends Component {
     }
 
     static contextTypes = {
-        ctx: PropTypes.object
+        ctx: PropTypes.object,
+        width: PropTypes.number,
+        height: PropTypes.number,
     }
     
     shadow(ctx, shadow = {}) {

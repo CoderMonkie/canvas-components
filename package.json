@@ -1,24 +1,27 @@
 {
-  "name": "react-canvas",
-  "version": "0.0.1",
+  "name": "canvas-components",
+  "version": "0.0.2",
   "description": "Canvas components for React.",
   "main": "index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --open",
     "build": "webpack --config webpack.config.js",
     "compile": "npx babel src --out-dir lib",
-    "publish": "npm run compile && npm publish"
+    "do-publish": "npm run compile && npm publish"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CoderMonkie/react-canvas.git"
+    "url": "git+https://github.com/CoderMonkie/canvas-components.git"
   },
-  "author": "CoderMonkie",
+  "author": "maonianyou",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CoderMonkie/react-canvas/issues"
+    "url": "https://github.com/CoderMonkie/canvas-components/issues"
   },
-  "homepage": "https://github.com/CoderMonkie/react-canvas#readme",
+  "homepage": "https://github.com/CoderMonkie/canvas-components#readme",
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
@@ -42,5 +45,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "keywords": ["react", "canvas"]
 }
